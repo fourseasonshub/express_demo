@@ -12,6 +12,7 @@ app.listen(port, () => {
 
 app.get('/request', (req, res, next) => {
   req.name = '张三';
+  next(); // 继续执行下面的中间件
 })
 
 app.get('/request', (req, res) => {
